@@ -18,11 +18,11 @@ function NewPlantForm({ onAddPlant }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Convert price to number
+    // Create new plant object
     const newPlant = {
       name: formData.name,
       image: formData.image,
-      price: parseFloat(formData.price),
+      price: formData.price, 
     };
 
     onAddPlant(newPlant);

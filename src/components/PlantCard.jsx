@@ -2,10 +2,10 @@ function PlantCard({ plant, onToggleSoldOut }) {
   const { id, name, image, price, soldOut } = plant;
 
   return (
-    <li className="card">
+    <li className="card" data-testid="plant-item">
       <img src={image} alt={name} />
       <h4>{name}</h4>
-      <p>Price: ${price}</p>
+      <p>Price: {price}</p>
       <button
         className={soldOut ? '' : 'primary'}
         onClick={() => onToggleSoldOut(id)}
